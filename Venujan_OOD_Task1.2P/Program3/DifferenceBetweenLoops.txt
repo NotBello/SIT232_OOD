@@ -1,0 +1,14 @@
+Although do while loops, while loops and for loops appear to perform and produce the same output. 
+They are not the same. 
+
+The while loops can perform iterations unitl the given condition is assigned as false. 
+This results in dynamically looping through events, items, etc without knowing their size or limit.
+This type of loop is especially helpful in input validation as shown in the console application
+
+The do while loop is similar to that of the while loops. But the single notable difference is that minimum number of execution.
+The do while loop statement performs an iteration atleast once before checking for the condition. 
+This is helpful incases where the logic had to be deployed once to be useful in the following iterations.
+
+The for loop similar to that of the selective condition satements. That is, for the iteration to be initaited,
+the condition with the known domain space is evaluated. This is helpful for iterating through loops, 
+where the final limit depends on fixed values and not further conditions as shown in while and do-while loops. 
