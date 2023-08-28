@@ -43,7 +43,27 @@ namespace MobileEnv
              currency format*/
         }
 
+        //Mutator Methods
 
+        public void setAccType(string accType)
+        {
+            this.accType = accType;
+        }
+
+        public void setDevice(string device)
+        {
+            this.device = device;
+        }
+
+        public void setNumber(string number)
+        {
+            this.number = number;
+        }
+
+        public void setBalance(double balance)
+        {
+            this.balance = balance;
+        }
 
 
     }
