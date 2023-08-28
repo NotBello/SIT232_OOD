@@ -16,6 +16,16 @@ namespace EmployeeSalaryManagement
             Console.WriteLine("Employee name:   " + bello.getName());
             Console.WriteLine("Employee salary: " + bello.getSalary());
 
+            Console.WriteLine();
+            Console.WriteLine("Calculating tax for " + bello.getName() + "...");
+            Console.WriteLine(bello.employeeTax().ToString("C"));
+            bello.deductTax();
+
+            Console.WriteLine();
+            Console.WriteLine("Updated info for " + bello.getName());
+            Console.WriteLine("Employee name:   " + bello.getName());
+            Console.WriteLine("Employee salary: " + bello.getSalary());
+
         }
     }
 }
