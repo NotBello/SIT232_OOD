@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeSalaryManagment
+namespace EmployeeSalaryManagement
 {
     class Employee
     {
@@ -17,6 +17,24 @@ namespace EmployeeSalaryManagment
         {
             this.name = employeeName;
             this.salary = currentSalary;
+        }
+
+        //Accessor methods
+        public string getName()
+        {
+            return name;
+        }
+
+        public string getSalary()
+        {
+            return salary.ToString("C");
+        }
+
+        //Methods
+        public void raiseSalary()
+        {
+            double raise = this.salary * 0.03;
+            this.salary += raise ; 
         }
 
 
