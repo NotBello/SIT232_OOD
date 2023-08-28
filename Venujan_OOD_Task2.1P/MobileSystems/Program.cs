@@ -22,6 +22,17 @@ namespace MobileEnv
             Console.WriteLine("Account Type: " + jimMobile.getAcctype() + "\nMobile Number: "
                 + jimMobile.getNumber() + "\nDevice: " + jimMobile.getDevice() + "\nBalance: "
                 + jimMobile.getBalance());
+
+            Console.WriteLine("\nChecking functions to add credit, make calls, and send text");
+            jimMobile.addCredit(10.0);
+            jimMobile.makeCall(5);
+            jimMobile.sendText(2);
+
+            Console.WriteLine();
+            Console.WriteLine("Account Type: " + jimMobile.getAcctype() + "\nMobile Number: "
+                + jimMobile.getNumber() + "\nDevice: " + jimMobile.getDevice() + "\nBalance: "
+                + jimMobile.getBalance());
+
         }
     }
 }

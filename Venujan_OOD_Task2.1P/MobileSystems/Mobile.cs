@@ -8,9 +8,16 @@ namespace MobileEnv
 {
     class Mobile
     {
+       //Instance variables
         private string accType, device, number;
         private double balance;
 
+        //Constants
+        private const double CALL_COST = 0.245;
+        private const double TEXT_COST = 0.078;
+
+
+        //Constructors
         public Mobile(string accType, string device, string number)
         {
             this.accType = accType;
@@ -65,6 +72,25 @@ namespace MobileEnv
             this.balance = balance;
         }
 
+        //Methods
+        public void addCredit(double amount)
+        {
+            this.balance += amount;
+            Console.WriteLine("Credit added successfully. New balance " + getBalance());
+        }
 
+        public void makeCall(int minutes)
+        {
+            double cost = minutes * CALL_COST;
+            this.balance -= cost;
+            Console.WriteLine("Call made. New balance " + getBalance());
+        }
+
+        public void sendText(int numTexts)
+        {
+            double cost = numTexts * TEXT_COST;
+            this.balance -= cost;
+            Console.WriteLine("Text sent. New balance " + getBalance());
+        }
     }
 }
