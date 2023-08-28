@@ -33,6 +33,23 @@ namespace MobileEnv
                 + jimMobile.getNumber() + "\nDevice: " + jimMobile.getDevice() + "\nBalance: "
                 + jimMobile.getBalance());
 
+            Console.WriteLine();
+            Console.WriteLine("Testing with a new Mobile account for Bello");
+            Mobile belloMobile = new Mobile("Monthly", "iPhone 14 Pro", "07059477054");
+            belloMobile.setBalance(2000);
+            Console.WriteLine("Account Type: " + belloMobile.getAcctype() + "\nMobile Number: "
+                + belloMobile.getNumber() + "\nDevice: " + belloMobile.getDevice() + "\nBalance: "
+                + belloMobile.getBalance());
+
+            Console.WriteLine();
+            belloMobile.makeCall(10);
+            belloMobile.sendText(4);
+
+            Console.WriteLine();
+            Console.WriteLine("Account Type: " + belloMobile.getAcctype() + "\nMobile Number: "
+                + belloMobile.getNumber() + "\nDevice: " + belloMobile.getDevice() + "\nBalance: "
+                + belloMobile.getBalance());
+
         }
     }
 }
