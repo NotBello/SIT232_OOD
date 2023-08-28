@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MobileSystems
+namespace MobileEnv
 {
     class Mobile
     {
@@ -38,6 +38,13 @@ namespace MobileSystems
         public string getBalance()
         {
             return this.balance.ToString("C");
+            /*returning the balance as currency which is a string by using 
+             by using Tostring method and the parameter "C" which gives the
+             currency format*/
         }
+
+
+
+
     }
 }
