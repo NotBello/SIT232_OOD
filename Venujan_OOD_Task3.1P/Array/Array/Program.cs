@@ -6,7 +6,7 @@ namespace Array
     {
         static void Main(string[] args)
         {
-            // step 1
+            // 1st question step 1
 
             // declares an array of type double with 10 elements
             double[] myArray = new double[10];
@@ -41,7 +41,7 @@ namespace Array
             // assigning the tenth element of the array
             myArray[9] = 1.9;
 
-            // step 2
+            // 1st question step 2
 
             // print the elements of the array
             Console.WriteLine("The element at index 0 in the array is " + myArray[0]);
@@ -56,6 +56,25 @@ namespace Array
             Console.WriteLine("The element at index 9 in the array is " + myArray[9]);
 
 
+            // 2nd question step 1
+
+            int[] myIntArray = new int[10];
+
+            // poplate the array
+            for (int i = 0;i < myIntArray.Length; i++)
+            {
+                myArray[i] = i;
+            }
+
+            Console.WriteLine("");
+
+            // 2nd question step 2
+
+            // print the elements of the array
+            for (int j = 0;  j < myIntArray.Length; j++)
+            {
+                Console.WriteLine("The element at the position " + j + " in the array is " + myArray[j]);
+            }
 
 
         }
