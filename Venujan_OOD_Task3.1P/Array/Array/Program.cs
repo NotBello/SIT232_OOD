@@ -56,6 +56,14 @@ namespace Array
             Console.WriteLine("The element at index 9 in the array is " + myArray[9]);
 
 
+
+
+            Console.WriteLine("");
+
+
+
+
+
             // 2nd question step 1
 
             int[] myIntArray = new int[10];
@@ -64,9 +72,7 @@ namespace Array
             for (int i = 0;i < myIntArray.Length; i++)
             {
                 myArray[i] = i;
-            }
-
-            Console.WriteLine("");
+            }            
 
             // 2nd question step 2
 
@@ -76,7 +82,15 @@ namespace Array
                 Console.WriteLine("The element at the position " + j + " in the array is " + myArray[j]);
             }
 
+
+
+
+
             Console.WriteLine("");
+
+
+
+
 
             // 3rd question step 1
             int[] studentArray = { 87, 68, 94, 100, 83, 78, 85, 91, 76, 87 };
@@ -96,6 +110,26 @@ namespace Array
             Console.WriteLine("The total marks for the student is: " + total);
             Console.WriteLine("This consists of " + studentArray.Length + " marks.");
             Console.WriteLine("Thus the average mark is " + (total / studentArray.Length));
+
+
+
+
+            Console.WriteLine("");
+
+            // 4th question step 1
+
+            string[] studentNameArray = new string[6];
+            for (int l = 0;  l < studentNameArray.Length; l++)
+            {
+                Console.WriteLine("Enter student name : ");
+                studentNameArray[l] = Console.ReadLine();
+            }
+            
+            // 4th question step 2
+            for (int l = 0; l < studentNameArray.Length; l++  )
+            {
+                Console.WriteLine("The name of the student in position " + l + " is " + studentNameArray[l]);
+            }
         }
     }
 }
