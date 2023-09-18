@@ -76,7 +76,26 @@ namespace Array
                 Console.WriteLine("The element at the position " + j + " in the array is " + myArray[j]);
             }
 
+            Console.WriteLine("");
 
+            // 3rd question step 1
+            int[] studentArray = { 87, 68, 94, 100, 83, 78, 85, 91, 76, 87 };
+            int total = 0;
+
+            for (int k = 0; k < studentArray.Length; k++)
+            {
+                Console.WriteLine("The element at the position " + k + " in the array is " + studentArray[k]);
+            }
+
+            for (int k = 0;  k < studentArray.Length; k++)
+            {
+                total += studentArray[k]; 
+            }
+
+            // 3rd question step 2
+            Console.WriteLine("The total marks for the student is: " + total);
+            Console.WriteLine("This consists of " + studentArray.Length + " marks.");
+            Console.WriteLine("Thus the average mark is " + (total / studentArray.Length));
         }
     }
 }
