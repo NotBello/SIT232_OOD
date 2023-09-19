@@ -56,6 +56,29 @@ namespace bank
 
         }
 
+        static void DoWithdraw(Account account)
+        {
+            Console.Write("Enter the amount to withdraw: ");
+            decimal withdrawAmount = Convert.ToDecimal(Console.ReadLine());
+            bool withdrawResult = account.Withdraw(withdrawAmount);
+            string withdrawResultString = (withdrawResult) ? "successful." : "unsuccessful."; //if else shorthand
+            Console.WriteLine("The transaction is " + withdrawResultString);
+        }
+
+        static void DoDeposit(Account account)
+        {
+            Console.Write("Enter the amount to deposit: ");
+            decimal depositAmount = Convert.ToDecimal(Console.ReadLine());
+            bool depositResult = account.Deposit(depositAmount);
+            string depositResultString = (depositResult) ? "successful." : "unsuccessful.";//if else shorthand
+            Console.WriteLine("The transaction is " + depositResultString);
+        }
+
+        static void DoPrint(Account account)
+        {
+            account.Print();
+        }
+
         static void Main(string[] args)
         {
             /*
@@ -73,7 +96,7 @@ namespace bank
             Console.WriteLine("");
 
             // 2nd question
-            Account bello = new Account(24000.99, "Venujan");
+            Account bello = new Account(24000.99m, "Venujan");
             bello.Print();
 
             
@@ -85,21 +108,13 @@ namespace bank
                 switch (userChoice)
                 {
                     case MenuOption.Withdraw:
-                        Console.Write("Enter the amount to withdraw: ");
-                        double withdrawAmount = Convert.ToDouble(Console.ReadLine());
-                        bool withdrawResult = bello.Withdraw(withdrawAmount);
-                        string withdrawResultString = (withdrawResult) ? "successful." : "unsuccessful."; //if else shorthand
-                        Console.WriteLine("The transaction is " + withdrawResultString);
+                        DoWithdraw(bello);
                         break;
                     case MenuOption.Deposit:
-                        Console.Write("Enter the amount to deposit: ");
-                        double depositAmount = Convert.ToDouble(Console.ReadLine());
-                        bool depositResult = bello.Deposit(depositAmount);
-                        string depositResultString = (depositResult) ? "successful." : "unsuccessful.";//if else shorthand
-                        Console.WriteLine("The transaction is " + depositResultString);
+                        DoDeposit(bello);
                         break;
                     case MenuOption.Print:
-                        bello.Print();
+                        DoPrint(bello);
                         break;
                     case MenuOption.Quit:
                         Console.WriteLine("Goodbye!");

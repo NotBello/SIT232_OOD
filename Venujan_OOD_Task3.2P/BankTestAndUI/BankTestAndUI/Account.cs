@@ -8,7 +8,7 @@ namespace bank
 {
     class Account
     {
-        private double balance;
+        private decimal balance;
         private string name;
         private bool validateWithdraw = false;
         private bool validateDeposit = false;
@@ -22,13 +22,13 @@ namespace bank
 
 
 
-        public Account(double balance, string name)
+        public Account(decimal balance, string name)
         {
             this.balance = balance;
             this.name = name;
         }
 
-        public bool Deposit(double amount)
+        public bool Deposit(decimal amount)
         {
             if (amount > 0)
             {
@@ -43,7 +43,7 @@ namespace bank
 
         }
 
-        public bool Withdraw(double amount)
+        public bool Withdraw(decimal amount)
         {
             if (this.balance > amount)
             {
