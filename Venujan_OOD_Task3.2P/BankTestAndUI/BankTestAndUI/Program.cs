@@ -16,7 +16,9 @@ namespace bank
 
         static MenuOption ReadUserOption()
         {
-            MenuOption userChoice;
+            int userChoiceInt;
+
+
             do
             {
                 Console.WriteLine("Menu:");
@@ -26,17 +28,32 @@ namespace bank
                 Console.WriteLine("4. Quit");
 
 
+
+                userChoiceInt = Convert.ToInt32(Console.ReadLine());
+
+                if (0 <= userChoiceInt && userChoiceInt<= 3)
+                {
+                    break;
+                }
+
+                /*
                 // Try to parse the userChoice into an enum value of MenuOption.
                 // Additionally check whether the value represented by userChoice is defined in the MenuOption enum.
                 if (Enum.TryParse(Console.ReadLine(), out userChoice) && Enum.IsDefined(typeof(MenuOption), userChoice))
                 {
                     break;
                 }
-
+                */
                 Console.WriteLine("Invalid option. Please choose a valid option (0-3).");
             } while (true);
 
+            MenuOption userChoice = (MenuOption)userChoiceInt;
+            
             return userChoice;
+            
+
+           
+
         }
 
         static void Main(string[] args)
@@ -53,15 +70,18 @@ namespace bank
             bello.Print();
             */
 
+            Console.WriteLine("");
+
             // 2nd question
             Account bello = new Account(24000.99, "Venujan");
             bello.Print();
 
+            
             MenuOption userChoice;
             do
             {
                 userChoice = ReadUserOption();
-
+                
                 switch (userChoice)
                 {
                     case MenuOption.Withdraw:
@@ -86,6 +106,8 @@ namespace bank
                         break;
                 }
             } while (userChoice != MenuOption.Quit);
+            
+
         }
 
 
