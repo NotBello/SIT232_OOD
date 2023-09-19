@@ -6,6 +6,7 @@ namespace Array
     {
         static void Main(string[] args)
         {
+            /*
             // 1st question step 1
 
             // declares an array of type double with 10 elements
@@ -130,6 +131,52 @@ namespace Array
             {
                 Console.WriteLine("The name of the student in position " + l + " is " + studentNameArray[l]);
             }
+
+            
+
+            Console.WriteLine("");
+
+            // 5th question step 1
+            double[] compareArray = new double[10];
+            int currenSize = 0;
+            double currentLargest, currentSmallest;
+
+            for (int m = 0; m < compareArray.Length; m++)
+            {
+                Console.WriteLine("Enter double num : ");
+                compareArray[m] = Convert.ToDouble(Console.ReadLine());
+            }
+
+            for (int m = 0; m < compareArray.Length; m++)
+            {
+                Console.WriteLine("The number in position " + m + " is " + compareArray[m]);
+            }
+
+            // 5th question step 2
+            currentLargest = compareArray[0];
+            currentSmallest = compareArray[0];
+            for (int m = 0;m < compareArray.Length; m++)
+            {
+                if (compareArray[m] > currentLargest)
+                {
+                    currentLargest = compareArray[m];
+                }
+                if (compareArray[m] < currentSmallest)
+                {
+                    currentSmallest = compareArray[m];
+                }
+            }
+
+            Console.WriteLine("\nThe largest number in the array is " +  currentLargest);
+            Console.WriteLine("\nThe smallest number in the array is " + currentSmallest);
+
+            */
+
+            // 6th question step 1
+            int[,] myArray = new int[3, 4] { { 1, 2, 3, 4 }, { 1, 1, 1, 1 }, { 2, 2, 2, 2} };
+
+
+
         }
     }
 }
