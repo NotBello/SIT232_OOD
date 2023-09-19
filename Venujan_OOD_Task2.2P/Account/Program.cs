@@ -68,6 +68,9 @@ namespace bank
             Console.WriteLine("Withdrawing 10,000");
             bello.Withdraw(10000);
             bello.Print();
+            Console.WriteLine("Deposit 10,000");
+            bello.Deposit(10000);
+            bello.Print();
 
         }
     }
