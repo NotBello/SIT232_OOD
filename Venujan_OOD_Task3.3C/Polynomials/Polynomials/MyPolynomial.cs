@@ -86,7 +86,7 @@ namespace Polynomials
                 resultCoeffs[i] = thisCoeff + anotherCoeff;
             }
 
-            return new MyPolynomial(resultCoeffs);
+            return new MyPolynomial(resultCoeffs);  // converting double [] to Mypolynomial
         }
 
         // Multiply another polynomial object to .this polynomial object
@@ -103,7 +103,7 @@ namespace Polynomials
                 }
             }
 
-            return new MyPolynomial(resultCoeffs);
+            return new MyPolynomial(resultCoeffs);  // converting double [] to MyPolynomial
         }
 
     }
