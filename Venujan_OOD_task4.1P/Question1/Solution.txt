@@ -1,0 +1,54 @@
+This document is prepared by Venujan Malaiyandi ,a.k.a Bello
+
+For Object Oriented Development Module, for task 4.1P
+
+1) NullReferenceException:
+
+A NullReferenceException is a common runtime exception in C# that occurs when trying to access a member of a null object. This means that we are trying to perform an operation on an object that has not been instantiated (i.e., it's currently null).
+
+a) Possible Situation Leading to the Exception:
+In the code attached, the variable str is null, and when you try to access its Length property, it leads to a NullReferenceException.
+
+b) Who is in Charge of Throwing the Exception:
+The runtime system is responsible for throwing a NullReferenceException when it detects that you are trying to perform an operation on a null object. This is not something you deliberately throw in your code.
+           In theory, we should not intentionally throw a NullReferenceException because it's typically considered bad practice. Instead, we should check if an object is null before trying to access its members.
+
+c) Details in the Exception Message:
+If we were to throw a NullReferenceException, we would need to provide a clear message indicating which object is null and causing the exception. This information would be crucial for the caller to debug the issue.
+
+d) Can the Exception be Generally Caught:
+Yes, a NullReferenceException can be caught using a try-catch block. However, it's generally better to prevent it from occurring in the first place by checking for null values before accessing members.
+
+e) Should You Generally Catch This Exception:
+It's generally better to avoid catching NullReferenceException unless we have a specific reason to handle it in a certain way. Instead, focus on preventing it through proper null checks. If we caught it, we should have a solution on how to handle the situation.
+
+
+2) IndexOutOfRangeException:
+
+An IndexOutOfRangeException is a common runtime exception in C# that occurs when you try to access an element of an array or a collection using an index that is outside the valid range.
+
+a) Possible Situation Leading to the Exception:
+
+In the code attached, the array numbers has five elements, and I am trying to access the sixth element, which doesn't exist. This leads to an IndexOutOfRangeException.
+
+b) Who is in Charge of Throwing the Exception:
+The runtime system is responsible for throwing an IndexOutOfRangeException when it detects that you are trying to access an element using an index that is out of bounds. As a programmer, you do not throw this exception deliberately.
+
+In theory, you should not intentionally throw an IndexOutOfRangeException. Instead, you should perform proper index checks before accessing elements in an array or collection.
+
+c) Details in the Exception Message:
+If you were to throw an IndexOutOfRangeException, you would need to provide a clear message indicating which index is out of range and what the valid range is for the given collection or array.
+
+d) Can the Exception be Generally Caught:
+Yes, an IndexOutOfRangeException can be caught using a try-catch block. However, it's generally better to avoid it by performing proper index validation before accessing elements.
+
+e) Should You Generally Catch This Exception:
+It's generally better to avoid catching IndexOutOfRangeException unless you have a specific reason to handle it in a certain way. Instead, you should validate indices before accessing elements to prevent the exception from occurring.
+
+f) Avoidance of the Exception:
+As a programmer, we should avoid IndexOutOfRangeException by always checking that the index you are using is within the valid range for the given array or collection. You can do this by using conditional statements or by utilizing methods like Length (for arrays) or Count (for collections) to ensure that the index is valid.
+
+3) StackOverflowException:
+A StackOverflowException is a runtime exception in C# that occurs when the call stack exceeds its maximum allowed size. This typically happens due to recursive function calls without proper termination conditions.
+
+
