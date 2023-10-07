@@ -4,7 +4,6 @@ namespace handleError
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
             errorcases usrOne = new errorcases();
@@ -20,38 +19,55 @@ namespace handleError
             Console.WriteLine("Press 7 for ArgumentOutOfRangeException");
             Console.WriteLine("Press 8 for SystemException");
 
-            int input = Convert.ToInt32(Console.ReadLine());
+            string stringCheck; // Define stringCheck outside the loop
 
-            switch (input)
+            do
             {
-                case 0:
-                    usrOne.nullreferenceexception();
-                    break;
-                case 1:
-                    usrOne.indexoutofrangeexception();
-                    break;
-                case 2:
-                    usrOne.stackoverflowexception();
-                    break;
-                case 3:
-                    usrOne.outofmemoryexception();
-                    break;
-                case 4:
-                    usrOne.invalidcastexception();
-                    break;
-                case 5:
-                    usrOne.dividebyzeroexception();
-                    break;
-                case 6:
-                    usrOne.argumentexception();
-                    break;
-                case 7:
-                    usrOne.argumentoutofrangeexception();
-                    break;
-                case 8:
-                    usrOne.systemexception();
-                    break;
-            }
+                int input = Convert.ToInt32(Console.ReadLine());
+
+                try
+                {
+                    switch (input)
+                    {
+                        case 0:
+                            usrOne.nullreferenceexception();
+                            break;
+                        case 1:
+                            usrOne.indexoutofrangeexception();
+                            break;
+                        case 2:
+                            usrOne.stackoverflowexception();
+                            break;
+                        case 3:
+                            usrOne.outofmemoryexception();
+                            break;
+                        case 4:
+                            usrOne.invalidcastexception();
+                            break;
+                        case 5:
+                            usrOne.dividebyzeroexception();
+                            break;
+                        case 6:
+                            usrOne.argumentexception();
+                            break;
+                        case 7:
+                            usrOne.argumentoutofrangeexception();
+                            break;
+                        case 8:
+                            usrOne.systemexception();
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                Console.WriteLine("\nDo you want to continue; y or n"); // Corrected the message
+                stringCheck = Console.ReadLine();
+
+                Console.WriteLine();
+            } while (stringCheck.ToLower() != "n");
         }
     }
 }

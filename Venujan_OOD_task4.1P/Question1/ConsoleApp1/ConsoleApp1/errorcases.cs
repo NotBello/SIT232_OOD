@@ -55,7 +55,9 @@ namespace handleError
 
         public void dividebyzeroexception()
         {
-            //int result = 10 / 0; // This line will throw a DivideByZeroException
+            int a = 0;
+
+            int result = 10 / a; // This line will throw a DivideByZeroException
 
         }
 
