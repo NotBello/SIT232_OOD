@@ -1,4 +1,9 @@
-﻿using bankOrg;
+﻿// Created by Venujan Malaiyandi
+// BSCP|CS|61|101
+// For Task 6.2P
+
+
+using bankOrg;
 using System;
 
 namespace BankTransfer
